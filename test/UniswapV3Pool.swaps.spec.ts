@@ -447,7 +447,7 @@ const TEST_POOLS: PoolTestCase[] = [
   },
 ]
 
-describe('UniswapV3Pool swap tests', () => {
+describe('CytoswapV3Pool swap tests', () => {
   let wallet: Wallet, other: Wallet
 
   let loadFixture: ReturnType<typeof createFixtureLoader>

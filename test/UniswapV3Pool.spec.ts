@@ -1,7 +1,7 @@
 import { ethers, waffle } from 'hardhat'
 import { BigNumber, BigNumberish, constants, Wallet } from 'ethers'
 import { TestERC20 } from '../typechain/TestERC20'
-import { UniswapV3Factory } from '../typechain/UniswapV3Factory'
+import { CytoswapV3Factory } from '../typechain/CytoswapV3Factory'
 import { MockTimeUniswapV3Pool } from '../typechain/MockTimeUniswapV3Pool'
 import { TestUniswapV3SwapPay } from '../typechain/TestUniswapV3SwapPay'
 import checkObservationEquals from './shared/checkObservationEquals'
@@ -36,14 +36,14 @@ const createFixtureLoader = waffle.createFixtureLoader
 
 type ThenArg<T> = T extends PromiseLike<infer U> ? U : T
 
-describe('UniswapV3Pool', () => {
+describe('CytoswapV3Pool', () => {
   let wallet: Wallet, other: Wallet
 
   let token0: TestERC20
   let token1: TestERC20
   let token2: TestERC20
 
-  let factory: UniswapV3Factory
+  let factory: CytoswapV3Factory
   let pool: MockTimeUniswapV3Pool
 
   let swapTarget: TestUniswapV3Callee

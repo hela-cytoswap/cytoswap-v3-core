@@ -24,7 +24,7 @@ import {
 
 const createFixtureLoader = waffle.createFixtureLoader
 
-describe('UniswapV3Pool gas tests', () => {
+describe('CytoswapV3Pool gas tests', () => {
   let wallet: Wallet, other: Wallet
 
   let loadFixture: ReturnType<typeof createFixtureLoader>

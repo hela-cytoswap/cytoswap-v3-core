@@ -1,26 +1,26 @@
 {
-  "name": "@uniswap/v3-core",
-  "description": "🦄 Core smart contracts of Uniswap V3",
+  "name": "@cytoswap/v3-core",
+  "description": "🦄 Core smart contracts of Cytoswap V3",
   "license": "BUSL-1.1",
   "publishConfig": {
     "access": "public"
   },
   "version": "1.0.1",
-  "homepage": "https://uniswap.org",
+  "homepage": "https://cytoswap.com",
   "keywords": [
-    "uniswap",
+    "cytoswap",
     "core",
     "v3"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Uniswap/uniswap-v3-core"
+    "url": "https://github.com/Cytoswap/cytoswap-v3-core"
   },
   "files": [
     "contracts/interfaces",
     "contracts/libraries",
-    "artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json",
-    "artifacts/contracts/UniswapV3Pool.sol/UniswapV3Pool.json",
+    "artifacts/contracts/CytoswapV3Factory.sol/CytoswapV3Factory.json",
+    "artifacts/contracts/CytoswapV3Pool.sol/CytoswapV3Pool.json",
     "artifacts/contracts/interfaces/**/*.json",
     "!artifacts/contracts/interfaces/**/*.dbg.json"
   ],
