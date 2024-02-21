@@ -2,7 +2,7 @@ import { BigNumber } from 'ethers'
 import { ethers } from 'hardhat'
 import { MockTimeUniswapV3Pool } from '../../typechain/MockTimeUniswapV3Pool'
 import { TestERC20 } from '../../typechain/TestERC20'
-import { UniswapV3Factory } from '../../typechain/UniswapV3Factory'
+import { CytoswapV3Factory } from '../../typechain/CytoswapV3Factory'
 import { TestUniswapV3Callee } from '../../typechain/TestUniswapV3Callee'
 import { TestUniswapV3Router } from '../../typechain/TestUniswapV3Router'
 import { MockTimeUniswapV3PoolDeployer } from '../../typechain/MockTimeUniswapV3PoolDeployer'
@@ -10,12 +10,12 @@ import { MockTimeUniswapV3PoolDeployer } from '../../typechain/MockTimeUniswapV3
 import { Fixture } from 'ethereum-waffle'
 
 interface FactoryFixture {
-  factory: UniswapV3Factory
+  factory: CytoswapV3Factory
 }
 
 async function factoryFixture(): Promise<FactoryFixture> {
-  const factoryFactory = await ethers.getContractFactory('UniswapV3Factory')
-  const factory = (await factoryFactory.deploy()) as UniswapV3Factory
+  const factoryFactory = await ethers.getContractFactory('CytoswapV3Factory')
+  const factory = (await factoryFactory.deploy()) as CytoswapV3Factory
   return { factory }
 }
 
