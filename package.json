@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Cytoswap/cytoswap-v3-core"
+    "url": "https://gitlab.snapresearch.io/swapnity/cytoswap-v3-core"
   },
   "files": [
     "contracts/interfaces",

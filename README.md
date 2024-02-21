@@ -1,13 +1,7 @@
 # Cytoswap V3
 
-[![Lint](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/lint.yml/badge.svg)](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/lint.yml)
-[![Tests](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/tests.yml/badge.svg)](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/tests.yml)
-[![Fuzz Testing](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/fuzz-testing.yml/badge.svg)](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/fuzz-testing.yml)
-[![Mythx](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/mythx.yml/badge.svg)](https://github.com/Cytoswap/cytoswap-v3-core/actions/workflows/mythx.yml)
-[![npm version](https://img.shields.io/npm/v/@cytoswap/v3-core/latest.svg)](https://www.npmjs.com/package/@cytoswap/v3-core/v/latest)
-
 This repository contains the core smart contracts for the Cytoswap V3 Protocol.
-For higher level contracts, see the [cytoswap-v3-periphery](https://github.com/Cytoswap/cytoswap-v3-periphery)
+For higher level contracts, see the [cytoswap-v3-periphery](https://gitlab.snapresearch.io/swapnity/cytoswap-v3-periphery)
 repository.
 
 ## Bug bounty
