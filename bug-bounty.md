@@ -2,7 +2,7 @@
 
 ## Overview
 
-Starting on March 23rd, 2021, the [cytoswap-v3-core](https://github.com/Cytoswap/cytoswap-v3-core) repository is subject to the Cytoswap V3 Bug Bounty (the “Program”) to incentivize responsible bug disclosure.
+Starting on March 23rd, 2021, the [cytoswap-v3-core](https://gitlab.snapresearch.io/swapnity/cytoswap-v3-core) repository is subject to the Cytoswap V3 Bug Bounty (the “Program”) to incentivize responsible bug disclosure.
 
 We are limiting the scope of the Program to critical and high severity bugs, and are offering a reward of up to $500,000. Happy hunting!
 
