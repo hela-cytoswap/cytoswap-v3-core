@@ -38,19 +38,19 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
     using Position for Position.Info;
     using Oracle for Oracle.Observation[65535];
 
-    /// @inheritdoc IUniswapV3PoolImmutables
+    /// @inheritdoc ICytoswapV3PoolImmutables
     address public immutable override factory;
-    /// @inheritdoc IUniswapV3PoolImmutables
+    /// @inheritdoc ICytoswapV3PoolImmutables
     address public immutable override token0;
-    /// @inheritdoc IUniswapV3PoolImmutables
+    /// @inheritdoc ICytoswapV3PoolImmutables
     address public immutable override token1;
-    /// @inheritdoc IUniswapV3PoolImmutables
+    /// @inheritdoc ICytoswapV3PoolImmutables
     uint24 public immutable override fee;
 
-    /// @inheritdoc IUniswapV3PoolImmutables
+    /// @inheritdoc ICytoswapV3PoolImmutables
     int24 public immutable override tickSpacing;
 
-    /// @inheritdoc IUniswapV3PoolImmutables
+    /// @inheritdoc ICytoswapV3PoolImmutables
     uint128 public immutable override maxLiquidityPerTick;
 
     struct Slot0 {
@@ -70,12 +70,12 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
         // whether the pool is locked
         bool unlocked;
     }
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     Slot0 public override slot0;
 
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     uint256 public override feeGrowthGlobal0X128;
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     uint256 public override feeGrowthGlobal1X128;
 
     // accumulated protocol fees in token0/token1 units
@@ -83,19 +83,19 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
         uint128 token0;
         uint128 token1;
     }
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     ProtocolFees public override protocolFees;
 
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     uint128 public override liquidity;
 
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     mapping(int24 => Tick.Info) public override ticks;
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     mapping(int16 => uint256) public override tickBitmap;
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     mapping(bytes32 => Position.Info) public override positions;
-    /// @inheritdoc IUniswapV3PoolState
+    /// @inheritdoc ICytoswapV3PoolState
     Oracle.Observation[65535] public override observations;
 
     /// @dev Mutually exclusive reentrancy protection into the pool to/from a method. This method also prevents entrance
@@ -154,7 +154,7 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
         return abi.decode(data, (uint256));
     }
 
-    /// @inheritdoc IUniswapV3PoolDerivedState
+    /// @inheritdoc ICytoswapV3PoolDerivedState
     function snapshotCumulativesInside(int24 tickLower, int24 tickUpper)
         external
         view
@@ -232,7 +232,7 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
         }
     }
 
-    /// @inheritdoc IUniswapV3PoolDerivedState
+    /// @inheritdoc ICytoswapV3PoolDerivedState
     function observe(uint32[] calldata secondsAgos)
         external
         view
@@ -833,7 +833,7 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
         emit Flash(msg.sender, recipient, amount0, amount1, paid0, paid1);
     }
 
-    /// @inheritdoc IUniswapV3PoolOwnerActions
+    /// @inheritdoc ICytoswapV3PoolOwnerActions
     function setFeeProtocol(uint8 feeProtocol0, uint8 feeProtocol1) external override lock onlyFactoryOwner {
         require(
             (feeProtocol0 == 0 || (feeProtocol0 >= 4 && feeProtocol0 <= 10)) &&
@@ -844,7 +844,7 @@ contract CytoswapV3Pool is ICytoswapV3Pool, NoDelegateCall {
         emit SetFeeProtocol(feeProtocolOld % 16, feeProtocolOld >> 4, feeProtocol0, feeProtocol1);
     }
 
-    /// @inheritdoc IUniswapV3PoolOwnerActions
+    /// @inheritdoc ICytoswapV3PoolOwnerActions
     function collectProtocol(
         address recipient,
         uint128 amount0Requested,
