@@ -6,7 +6,7 @@ import '../interfaces/IERC20Minimal.sol';
 import '../interfaces/callback/ICytoswapV3SwapCallback.sol';
 import '../interfaces/ICytoswapV3Pool.sol';
 
-contract UniswapV3PoolSwapTest is ICytoswapV3SwapCallback {
+contract CytoswapV3PoolSwapTest is ICytoswapV3SwapCallback {
     int256 private _amount0Delta;
     int256 private _amount1Delta;
 

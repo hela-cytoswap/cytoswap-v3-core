@@ -8,7 +8,7 @@ import '../interfaces/IERC20Minimal.sol';
 import '../interfaces/callback/ICytoswapV3SwapCallback.sol';
 import '../interfaces/ICytoswapV3Pool.sol';
 
-contract TestUniswapV3Router is ICytoswapV3SwapCallback {
+contract TestCytoswapV3Router is ICytoswapV3SwapCallback {
     using SafeCast for uint256;
 
     // flash swaps for an exact amount of token0 in the output pool
