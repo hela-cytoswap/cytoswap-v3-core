@@ -3,9 +3,9 @@ pragma solidity =0.7.6;
 
 import '../interfaces/ICytoswapV3PoolDeployer.sol';
 
-import './MockTimeUniswapV3Pool.sol';
+import './MockTimeCytoswapV3Pool.sol';
 
-contract MockTimeUniswapV3PoolDeployer is ICytoswapV3PoolDeployer {
+contract MockTimeCytoswapV3PoolDeployer is ICytoswapV3PoolDeployer {
     struct Parameters {
         address factory;
         address token0;
@@ -27,7 +27,7 @@ contract MockTimeUniswapV3PoolDeployer is ICytoswapV3PoolDeployer {
     ) external returns (address pool) {
         parameters = Parameters({factory: factory, token0: token0, token1: token1, fee: fee, tickSpacing: tickSpacing});
         pool = address(
-            new MockTimeUniswapV3Pool{salt: keccak256(abi.encodePacked(token0, token1, fee, tickSpacing))}()
+            new MockTimeCytoswapV3Pool{salt: keccak256(abi.encodePacked(token0, token1, fee, tickSpacing))}()
         );
         emit PoolDeployed(pool);
         delete parameters;

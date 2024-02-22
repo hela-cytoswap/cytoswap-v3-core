@@ -12,7 +12,7 @@ import '../interfaces/callback/ICytoswapV3FlashCallback.sol';
 
 import '../interfaces/ICytoswapV3Pool.sol';
 
-contract TestUniswapV3Callee is ICytoswapV3MintCallback, ICytoswapV3SwapCallback, ICytoswapV3FlashCallback {
+contract TestCytoswapV3Callee is ICytoswapV3MintCallback, ICytoswapV3SwapCallback, ICytoswapV3FlashCallback {
     using SafeCast for uint256;
 
     function swapExact0For1(

@@ -6,7 +6,7 @@ import '../interfaces/IERC20Minimal.sol';
 import '../interfaces/callback/ICytoswapV3SwapCallback.sol';
 import '../interfaces/ICytoswapV3Pool.sol';
 
-contract TestUniswapV3SwapPay is ICytoswapV3SwapCallback {
+contract TestCytoswapV3SwapPay is ICytoswapV3SwapCallback {
     function swap(
         address pool,
         address recipient,

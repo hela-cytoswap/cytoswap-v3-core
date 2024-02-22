@@ -7,7 +7,7 @@ import '../interfaces/callback/ICytoswapV3SwapCallback.sol';
 
 import '../interfaces/ICytoswapV3Pool.sol';
 
-contract TestUniswapV3ReentrantCallee is ICytoswapV3SwapCallback {
+contract TestCytoswapV3ReentrantCallee is ICytoswapV3SwapCallback {
     string private constant expectedReason = 'LOK';
 
     function swapToReenter(address pool) external {
